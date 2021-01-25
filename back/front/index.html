@@ -1,0 +1,150 @@
+<html lang="pt-br">
+  <meta charset="utf-8" />
+  <header>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="scripts/update_purchases.js"></script>
+    <script src="scripts/update_days.js"></script>
+  </header>
+  <body onload="update_purchases(),update_days()">
+    <div class="side_menu">
+        <div>
+          <button>aaaa</button>
+          <button>aaaa</button>
+          <button>aaaa</button>
+        </div>
+      </div>
+    <div class="page">
+      
+      <div class="header_container">
+
+          <div class="logo_container">
+            <img class="logo" src="img/logo.jpg">
+          </div>
+          <div class="search_container">
+            <input class="search_txtfield">
+              <button class="search_button">a</button>
+            </input>
+          </div>
+
+      </div>
+
+      <div class="main_page">
+
+        <div class="left_container">
+
+          <div class="refine_container">
+
+            <div class="parameter_1">
+              
+              <select name="mes" class="select_month">
+                <option value="1" id="mes_select">Janeiro</option>
+                <option value="2" id="mes_select">Fevereiro</option>
+                <option value="3" id="mes_select">Março</option>
+                <option value="4" id="mes_select">Abril</option>
+                <option value="5" id="mes_select">Maio</option>
+                <option value="6" id="mes_select">Junho</option>
+                <option value="7" id="mes_select">Julho</option>
+                <option value="8" id="mes_select">Agosto</option>
+                <option value="9" id="mes_select">Setembro</option>
+                <option value="10" id="mes_select">Outubro</option>
+                <option value="11" id="mes_select">Novembro</option>
+                <option value="12" id="mes_select">Dezembro</option>
+              </select>
+            </div>
+            
+            <div class="parameter_2">
+              <select name="dia" class="select_day" onclick="update_days_by_month(document.getElementsByClassName('select_month')[0].value)">
+                
+              </select>
+            </div>
+
+          </div>
+          <div class="relevant_data">
+
+            <div class="rel_data_1">
+              Você gastou:
+              <label class="spent_this_month">
+                R$ 56
+              </label>
+            </div>
+            <div class="rel_data_2">
+              Você comprou:
+              <label class="kg_bought_this_month">
+                65 KG
+              </label>
+            </div>
+
+          </div>
+        
+        </div>
+	<div class="new_purchase_container">
+    <div class="new_purchase_form" >
+      <div class="new_purchase_header" onclick="expandNewPurchase(this.parentElement)">
+        <label id="add_purchase">ADICIONAR COMPRA</label>
+      </div>
+       <form id="formulario" action="/">
+          <p>PESO</p>
+          <input type="number" id='peso' name="weight">
+          <p>PREÇO</p>
+          <input type="number" id='preco' name="price">
+          <p><input type="submit" value="Subimite"></p>
+		   </form>
+    </div>
+	</div>
+
+        <div class="right_container">
+          <div class="purchases_header">
+            SUAS COMPRAS
+          </div>
+          <div class="purchases_list">
+            <div class="purchases">
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </body>
+  <script>
+    function expandPurchase(element){
+      if(element.getAttribute("class") == "purchase"){
+        element.setAttribute("class","purchase_ext")
+	      element.children[1].setAttribute("id","a_button")
+
+      }
+      else{
+        element.setAttribute("class","purchase")
+      	element.children[1].setAttribute("id","close_invisible")
+      }
+    }
+    function expandNewPurchase(element){
+      if(element.getAttribute("class") == "new_purchase_form"){
+        element.setAttribute("class","new_purchase_form_ext")
+      }
+      else{
+        element.setAttribute("class","new_purchase_form")
+      }
+    }
+
+  </script>
+  <script>
+    formulario.onsubmit = (e) => {
+      e.preventDefault();
+      formData = new FormData(formulario)
+      let inputs = formData.entries()
+      let object = {}
+      for(let position of inputs)
+        object[position[0]] = position[1]
+      
+      console.log(object)
+      let np_post = $.post("http://localhost:3000/new_purchase", object);
+      update_purchases()
+    }
+  </script>
+  
+  <link rel="stylesheet" href="styles/style_header.css">
+  <link rel="stylesheet" href="styles/style_left.css">
+  <link rel="stylesheet" href="styles/style_form.css">
+  <link rel="stylesheet" href="styles/style_right.css">
+</html>

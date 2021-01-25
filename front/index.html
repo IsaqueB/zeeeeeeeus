@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="../scripts/button_handler.js"></script>
+        <script src="../scripts/update_purchases.js"></script>
+    </head>
+    <body>
+        <div class="page">
+            <div class="side_menu">
+                <button class="sidemenu_buttom" onclick="go_home()"><img id="side_menu_img" src="img/home.png"></button>
+                <button class="sidemenu_buttom" onclick="go_purchases()"><img id="side_menu_img" src="img/list.png"></button>
+                <button class="sidemenu_buttom" onclick="go_new_purchase()"><img id="side_menu_img" src="img/new_purchase.png"></button>
+                <button class="sidemenu_buttom" onclick="go_about()"><img id="side_menu_img" src="img/about.png"></button>
+            </div>
+            <div class="loaded_content">
+            </div>
+        </div>
+    <script>document.addEventListener("DOMContentLoaded", go_home());</script>
+        <link rel="stylesheet" href="../styles/index.css">
+    </body>
+</html>

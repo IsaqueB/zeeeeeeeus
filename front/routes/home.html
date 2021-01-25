@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="../scripts/button_handler.js"></script>
+        <script src="../scripts/home_graphs.js"></script>
+        <script src="../scripts/relevant_data.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    </head>
+    <body>
+        <div class="home_header">
+            <h2>Bem Vindo, @user</h2>
+        </div>
+        <div class="charts">
+            <div class="purchase_container">
+                <div class="purchases_graph">
+                    <canvas class="graph" id="price_canvas"></canvas>
+                </div>
+                <div class="data">
+                    Gasto médio nos últimos 30 dias:
+                    <label id="gasto_30">122</label>
+                </div>
+            </div>
+            <div class="purchase_container">
+                <div class="purchases_graph">
+                    <canvas class="graph" id="weight_canvas"></canvas>
+                </div>
+                <div class="data">
+                    Média de kg comprados nos últimos 30 dias:
+                    <label id="peso_30">122</label>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script>
+        document.addEventListener("DOMContentLoaded",graph_function('price','price_canvas',' 23, 171, 240','Gastos nos últimos 30 dias','R$'),graph_function('weight','weight_canvas','23, 171, 240','Kg comprados nos últimos 30 dias','kg'),relevant_data_update());
+    </script>
+    <link rel="stylesheet" href="../styles/home.css">
+</html>

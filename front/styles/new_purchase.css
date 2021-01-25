@@ -1,0 +1,44 @@
+*{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.page_here{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    height: 100%;
+    box-shadow:0 4px 8px 0 rgba(0,0,0,0.2);
+}
+.header_np{
+    text-shadow: 2px 2px rgba(0,0,0,0.2);
+    font-weight: bolder;
+    text-align: center;
+    width: 100%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    color: var(--site_text_color);
+    background-color: var(--site_main_color);
+    border-bottom: solid;
+    border-color: rgba(140, 140, 140, 0.1);
+}
+.new_purchase_form{
+    text-align: center;
+    padding-top: 10%;
+    padding-left: 3%;
+    padding-right: 3%;
+    height: 100%;
+    background-color: rgba(255,255,255,0.4);
+}
+#form_submit{
+    margin-top: 5%;
+    padding-left: 5%;
+    padding-right: 5%;
+    color: var(--site_text_color);
+    background-color: var(--site_main_color);
+    border-style: solid;
+    border-color: rgba(0,0,0,0.1);
+    border-radius: 3px;
+}
+.field{
+    appearance: textfield;
+}

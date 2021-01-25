@@ -1,0 +1,45 @@
+.NavbarItem{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    transition-duration: 0.1s;
+    transition-property: background-color;
+}
+.NavbarItem:hover{
+    box-shadow: 0px 0px 8px rgb(57, 248, 255);
+    background-color: rgb(255, 38, 139);
+}
+.NavbarItemIconContainer{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 4vw;
+    height: 4vw;
+}
+.NavbarItemIcon{
+    width: 80%;
+    filter: invert(1);
+}
+#ExtraInfoVisible{
+    color: white;
+    margin: auto;
+    opacity: 1;
+    transition-duration: 0.2s;
+} 
+#ExtraInfoHidden{
+    color: white;
+    margin: auto;
+    opacity: 0;
+    transition-duration: 0s;
+    display: none;
+}
+
+@media screen and (max-width: 1000px){
+    .NavbarItemIconContainer{
+        width: 50px;
+        height: 50px;
+    }
+}

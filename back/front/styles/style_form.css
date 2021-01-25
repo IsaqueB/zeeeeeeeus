@@ -1,0 +1,47 @@
+  .new_purchase_container{
+    position: fixed;
+    left: 0px;
+    bottom: 0%;
+    height: 40px;
+    width: 25%;
+
+  }
+  .new_purchase_header{
+    background-color:  #8ab5e6;
+    height:15%
+  }
+  .new_purchase_form{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    text-align: center;
+    bottom: 0px;
+    width: 100%;
+    height: 300px;
+    background-color: #add8e6;
+    border-style: hidden;
+    border-radius: 5px;
+    transition-duration: 1s;
+    transition-property: bottom;    
+    
+  }
+  .new_purchase_form_ext{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    text-align: center;
+    bottom: 250px;
+    width: 100%;
+    height: 300px;
+    background-color: #add8e6;
+    border-style: hidden;
+    border-radius: 5px;
+    transition-duration: 1s;
+    transition-property: bottom;
+  }
+  #add_purchase{
+    margin-top: 10px;
+    color: blue;
+  }

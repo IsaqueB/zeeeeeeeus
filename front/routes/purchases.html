@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="../scripts/update_purchases.js"></script>
+        <script src="../scripts/expansions.js"></script>
+        <script src="../scripts/delete_purchase.js"></script>
+        <script src="../scripts/update_days.js"></script>
+    </head>
+    <body>
+        <div class="page_purchases">
+            <div class="refine_container">
+                <div class="refine_header">Filtros</h1></div>
+                <select class="date_picker" id="select_month">
+                    <option value="99" id="mes_select">Mês</option>
+                    <option value="0" id="mes_select">Janeiro</option>
+                    <option value="1" id="mes_select">Fevereiro</option>
+                    <option value="2" id="mes_select">Março</option>
+                    <option value="3" id="mes_select">Abril</option>
+                    <option value="4" id="mes_select">Maio</option>
+                    <option value="5" id="mes_select">Junho</option>
+                    <option value="6" id="mes_select">Julho</option>
+                    <option value="7" id="mes_select">Agosto</option>
+                    <option value="8" id="mes_select">Setembro</option>
+                    <option value="9" id="mes_select">Outubro</option>
+                    <option value="10" id="mes_select">Novembro</option>
+                    <option value="11" id="mes_select">Dezembro</option>
+                </select>
+                <select class="date_picker" id="select_day" onclick="update_days_by_month(document.getElementById('select_month').value)"></select>
+                <button class="date_picker" id="submit_refine" onclick="refine_purchases(document.getElementById('select_month').value,document.getElementById('select_day').value)">Filtrar</button>
+            </div>
+            <div class="purchases"></div>
+        </div>
+    </body>
+    <script>
+        document.addEventListener("DOMContentLoaded", update_purchases(), update_days());
+    </script>
+    <link rel="stylesheet" href="../styles/purchases.css">
+</html>

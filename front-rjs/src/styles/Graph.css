@@ -1,0 +1,14 @@
+#myChart{
+    width: 10px;
+}
+#div{
+    position: relative;
+    width: 400px;
+    margin-bottom: 5%;
+}
+#graphs_div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}

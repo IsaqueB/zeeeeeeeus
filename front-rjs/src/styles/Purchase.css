@@ -1,0 +1,18 @@
+.purchase{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    align-items: center;
+    width: 100%;
+}
+.purchase:hover{
+    background-color: rgb(57, 192, 255)
+}
+*{
+    word-break: break-all;
+}
+.purchase:hover label{
+    color: white
+}

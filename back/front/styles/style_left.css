@@ -1,0 +1,31 @@
+  .left_container{
+    margin-top: 1%;
+    margin-left: 1%;
+    width: 20%;
+  }
+  .refine_container{
+    margin: 0px;
+    padding: 5px;
+    background-color: #CCCCCC;
+  }
+  .parameter_1{
+    margin-bottom: 10px;
+    background-color: #AAAAAA;
+  }
+  .parameter_2{
+    margin-bottom: 10px;
+    background-color: #AAAAAA;
+  }
+  .relevant_data{
+    padding: 5px;
+    background-color: #CCCCCC;
+  }
+  .rel_data_1{
+    margin: 5px;
+    background-color: #AAAAAA;
+  }
+  .rel_data_2{
+    margin: 5px;
+    background-color: #AAAAAA;
+  }
+
